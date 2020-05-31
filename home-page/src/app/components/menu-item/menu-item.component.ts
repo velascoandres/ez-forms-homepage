@@ -9,9 +9,19 @@ import { MenuItemInterface } from './interfaces/menu-item.interface';
 export class MenuItemComponent implements OnInit {
   @Input()
   menuItem: MenuItemInterface;
+
+  selected = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changeStatus(): void {
+    this.selected = !this.selected;
+    setTimeout(() => {
+      this.selected = false;
+    }, 500);
   }
 
 }

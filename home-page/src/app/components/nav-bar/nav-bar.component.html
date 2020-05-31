@@ -1,18 +1,19 @@
 <mat-toolbar color="warn" class="navegacion">
   <mat-toolbar-row>
-    <span>Ez-Forms</span>
-    <span class="spacer"></span>
-    <button
-      mat-button
-      aria-describedby="hello"
-      matTooltip="GitHub Repository"
-      aria-label="GitHub Repository"
-    >
-      <a href="https://github.com/velascoandres/ez-forms#readme" aria-disabled="false"
-        class="mat-button mat-button-base">
-        <mat-icon aria-hidden="true" isIconButton="true" svgIcon="github_logo"></mat-icon>
-      </a>
-    </button>
-
+    <div class="container">
+      <div class="d-flex justify-content-between">
+        <div class="p-2">
+          <span class="logo">EzForms</span>
+        </div>
+        <div class="p-2">
+          <button mat-button aria-describedby="hello" matTooltip="GitHub Repository" aria-label="GitHub Repository">
+            <a href="https://github.com/velascoandres/ez-forms#readme" aria-disabled="false"
+              class="mat-button mat-button-base">
+              <mat-icon aria-hidden="true" isIconButton="true" svgIcon="github_logo"></mat-icon>
+            </a>
+          </button>
+        </div>
+      </div>
+    </div>
   </mat-toolbar-row>
 </mat-toolbar>

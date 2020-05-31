@@ -28,5 +28,13 @@
 }
 
 .titulo{
-  border-bottom: 2px solid darkred;
+  border-bottom: 0.2rem solid darkred;
+  font-size: 1.5rem;
+  font-family: monospace;
+  line-height: 2rem;
+}
+
+.logo{
+  font-size: 2rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
