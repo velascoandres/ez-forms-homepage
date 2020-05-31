@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MenuItemInterface } from './interfaces/menu-item.interface';
 
 @Component({
@@ -9,6 +9,11 @@ import { MenuItemInterface } from './interfaces/menu-item.interface';
 export class MenuItemComponent implements OnInit {
   @Input()
   menuItem: MenuItemInterface;
+
+  currentItemValue: number;
+
+  @Output()
+  currentItem: EventEmitter<number> = new EventEmitter<number>();
 
   selected = false;
 
@@ -22,6 +27,15 @@ export class MenuItemComponent implements OnInit {
     setTimeout(() => {
       this.selected = false;
     }, 500);
+    this.emitItem();
+  }
+
+  emitItem() {
+    this.currentItem.emit(this.menuItem.id);
+  }
+
+  listenItem(event: number) {
+    this.currentItemValue = event;
   }
 
 }

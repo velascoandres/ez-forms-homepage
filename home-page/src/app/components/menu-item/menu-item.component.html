@@ -1,5 +1,5 @@
 <ng-container *ngIf="menuItem.root && menuItem.children && menuItem.children.length > 0">
-  <mat-expansion-panel>
+  <mat-expansion-panel (opened)="emitItem()">
     <mat-expansion-panel-header class="titulo">
       <mat-panel-title>
         <span>{{menuItem.title}}</span>
@@ -9,13 +9,17 @@
       </mat-panel-description>
     </mat-expansion-panel-header>
     <div>
-        <app-menu-item *ngFor="let item of menuItem.children" [menuItem]="item">
+        <app-menu-item
+        *ngFor="let item of menuItem.children"
+        [menuItem]="item"
+        (currentItem)="listenItem($event)"
+        >
         </app-menu-item>
     </div>
   </mat-expansion-panel>
 </ng-container>
 <ng-container *ngIf="!menuItem.root">
-  <div class="d-flex flex-column contenedor-item">
+  <div class="d-flex flex-column contenedor-item" [ngClass]="{'seleccionado': menuItem.id === currentItemValue}">
     <div class="p-2 flex-fill" (click)="changeStatus()">
       <div class="item-dot" [ngClass]="{'selected': selected}">
       </div>
