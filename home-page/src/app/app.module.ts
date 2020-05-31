@@ -13,10 +13,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatExpansionModule } from '@angular/material/expansion';
 import { MenuItemComponent } from './components/menu-item/menu-item.component';
-import { MatListModule } from '@angular/material/list';
-import { MatTreeModule } from '@angular/material/tree';
+import { ListItemComponent } from './components/list-item/list-item.component';
+// Pipes
+import { HasChildrenPipe } from './pipes/has-children.pipe';
 
 
 @NgModule({
@@ -24,7 +24,9 @@ import { MatTreeModule } from '@angular/material/tree';
     AppComponent,
     LateralMenuComponent,
     NavBarComponent,
-    MenuItemComponent
+    MenuItemComponent,
+    ListItemComponent,
+    HasChildrenPipe
   ],
   imports: [
     BrowserModule,
@@ -35,9 +37,6 @@ import { MatTreeModule } from '@angular/material/tree';
     MatButtonModule,
     HttpClientModule,
     MatTooltipModule,
-    MatExpansionModule,
-    MatListModule,
-    MatTreeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

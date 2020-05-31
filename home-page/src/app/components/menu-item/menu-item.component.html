@@ -1,31 +1,16 @@
-<ng-container *ngIf="menuItem.root && menuItem.children && menuItem.children.length > 0">
-  <mat-expansion-panel (opened)="emitItem()">
-    <mat-expansion-panel-header class="titulo">
-      <mat-panel-title>
-        <span>{{menuItem.title}}</span>
-      </mat-panel-title>
-      <mat-panel-description *ngIf="menuItem.description">
-        {{menuItem.description}}
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <div>
-        <app-menu-item
-        *ngFor="let item of menuItem.children"
-        [menuItem]="item"
-        (currentItem)="listenItem($event)"
-        >
-        </app-menu-item>
-    </div>
-  </mat-expansion-panel>
-</ng-container>
-<ng-container *ngIf="!menuItem.root">
-  <div class="d-flex flex-column contenedor-item" [ngClass]="{'seleccionado': menuItem.id === currentItemValue}">
-    <div class="p-2 flex-fill" (click)="changeStatus()">
-      <div class="item-dot" [ngClass]="{'selected': selected}">
+<ng-container>
+  <div>
+    <div class="title" class="contenedor-item" [ngClass]="{'collapsible': menuItem | hasChildren}"
+      (click)="changeStatus()">
+      <div [ngClass]="{'selected': selected, 'triangle': menuItem | hasChildren, 'item-dot': !(menuItem | hasChildren) }">
       </div>
       <div class="menu-sub-item">
         {{menuItem.title}}
       </div>
+    </div>
+    <div class="content animate__animated" *ngIf="(menuItem | hasChildren)"
+    [ngClass]="{'animate__zoomIn' : displayChildren, 'animate__zoomOut hide': !displayChildren}">
+        <app-list-item [items]="menuItem.children"></app-list-item>
     </div>
   </div>
 </ng-container>

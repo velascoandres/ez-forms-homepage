@@ -7,7 +7,7 @@ import { MENU_ITEMS } from 'src/app/constants/menu-items';
   styleUrls: ['./lateral-menu.component.css']
 })
 export class LateralMenuComponent implements OnInit {
-  @Input() menuItems;
+  menuItems = MENU_ITEMS;
 
   constructor() { }
 

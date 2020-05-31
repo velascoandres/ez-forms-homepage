@@ -1,9 +1,10 @@
 <div class="barra">
-  <mat-accordion multi>
+  <!-- <mat-accordion multi>
       <app-menu-item
       *ngFor="let menuItem of menuItems"
       [menuItem] = "menuItem"
       >
       </app-menu-item>
-  </mat-accordion>
+  </mat-accordion> -->
+  <app-list-item [items]="menuItems"></app-list-item>
 </div>

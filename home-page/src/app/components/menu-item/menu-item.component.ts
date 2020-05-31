@@ -12,6 +12,8 @@ export class MenuItemComponent implements OnInit {
 
   currentItemValue: number;
 
+  displayChildren = false;
+
   @Output()
   currentItem: EventEmitter<number> = new EventEmitter<number>();
 
@@ -28,6 +30,11 @@ export class MenuItemComponent implements OnInit {
       this.selected = false;
     }, 500);
     this.emitItem();
+    this.swichtChildren();
+  }
+
+  swichtChildren() {
+    this.displayChildren = !this.displayChildren;
   }
 
   emitItem() {
