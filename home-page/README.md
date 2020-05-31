@@ -29,5 +29,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Deploy
 
-ng build --prod --base-href=”https://velascoandres.github.io/ez-forms-homepage/”
+ng build --prod --base-href=https://velascoandres.github.io/ez-forms-homepage/
 
