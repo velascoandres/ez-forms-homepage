@@ -1,0 +1,36 @@
+<ng-container *ngIf="menuItem.root && menuItem.children && menuItem.children.length > 0">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header class="titulo">
+      <mat-panel-title>
+        <span>{{menuItem.title}}</span>
+      </mat-panel-title>
+      <mat-panel-description *ngIf="menuItem.description">
+        {{menuItem.description}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-action-list>
+      <mat-list-item *ngFor="let item of menuItem.children">
+        <app-menu-item [menuItem]="item">
+        </app-menu-item>
+      </mat-list-item>
+    </mat-action-list>
+  </mat-expansion-panel>
+</ng-container>
+<ng-container *ngIf="!menuItem.root">
+  <div class="d-flex flex-column">
+    <div class="p-2 flex-fill">
+      <span class="">{{menuItem.title}}</span>
+    </div>
+    <!-- <div *ngIf="menuItem.children && menuItem.children.length > 0" class="p-2 flex-fill">
+      <mat-accordion>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <span class="">{{menuItem.title}}</span>
+            </mat-expansion-panel-header>
+          <app-menu-item *ngFor="let subItem of menuItem.children" [menuItem]="subItem">
+          </app-menu-item>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div> -->
+  </div>
+</ng-container>

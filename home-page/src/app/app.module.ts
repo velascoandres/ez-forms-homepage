@@ -7,18 +7,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LateralMenuComponent } from './components/lateral-menu/lateral-menu.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
+// Angular Material Modules
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MenuItemComponent } from './components/menu-item/menu-item.component';
+import { MatListModule } from '@angular/material/list';
+import { MatTreeModule } from '@angular/material/tree';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LateralMenuComponent,
-    NavBarComponent
+    NavBarComponent,
+    MenuItemComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +35,9 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatButtonModule,
     HttpClientModule,
     MatTooltipModule,
+    MatExpansionModule,
+    MatListModule,
+    MatTreeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
