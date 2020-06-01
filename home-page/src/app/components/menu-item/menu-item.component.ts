@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MenuItemInterface } from './interfaces/menu-item.interface';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-menu-item',
@@ -19,7 +20,10 @@ export class MenuItemComponent implements OnInit {
 
   selected = false;
 
-  constructor() { }
+  constructor(
+    private readonly router: Router,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
   }
@@ -31,6 +35,8 @@ export class MenuItemComponent implements OnInit {
     }, 500);
     this.emitItem();
     this.swichtChildren();
+    this.navigaToRoute();
+
   }
 
   swichtChildren() {
@@ -43,6 +49,11 @@ export class MenuItemComponent implements OnInit {
 
   listenItem(event: number) {
     this.currentItemValue = event;
+  }
+
+  private navigaToRoute() {
+    const url = this.menuItem.route;
+    this.router.navigate([url]);
   }
 
 }

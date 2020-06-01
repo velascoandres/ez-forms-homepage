@@ -26,7 +26,7 @@ import { HasChildrenPipe } from './pipes/has-children.pipe';
     NavBarComponent,
     MenuItemComponent,
     ListItemComponent,
-    HasChildrenPipe
+    HasChildrenPipe,
   ],
   imports: [
     BrowserModule,

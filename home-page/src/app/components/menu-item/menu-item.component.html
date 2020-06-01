@@ -10,7 +10,7 @@
     </div>
     <div class="content animate__animated" *ngIf="(menuItem | hasChildren)"
     [ngClass]="{'animate__zoomIn' : displayChildren, 'animate__zoomOut hide': !displayChildren}">
-        <app-list-item [items]="menuItem.children"></app-list-item>
+        <app-list-item [items]="menuItem.children" [parentRoute]="menuItem.route"></app-list-item>
     </div>
   </div>
 </ng-container>

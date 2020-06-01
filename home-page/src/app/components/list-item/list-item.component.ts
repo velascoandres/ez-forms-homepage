@@ -11,6 +11,9 @@ export class ListItemComponent implements OnInit {
   @Input()
   items: MenuItemInterface[];
 
+  @Input()
+  parentRoute = '';
+
   constructor() { }
 
   ngOnInit(): void {
