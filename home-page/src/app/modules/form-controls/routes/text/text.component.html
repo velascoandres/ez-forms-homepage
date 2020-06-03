@@ -1,5 +1,38 @@
-<div class="container d-flex">
+<div class="container d-flex flex-column">
   <div class="p-2 flex-fill">
     <app-title title="Text Input"></app-title>
+  </div>
+  <div class="p-2 flex-fill">
+    <p>
+      To make use of text entries in the form, the field must first be defined through an object of type <strong>InputTextFieldInterface</strong>.
+    </p>
+  </div>
+  <div class="p-2 flex-fill">
+    <h3>Examples: </h3>
+      <p>
+        So we need a form with the following fields:
+      </p>
+      <ul>
+        <li>UUID</li>
+        <li>Email</li>
+        <li>Password</li>
+        <li>Address</li>
+      </ul>
+  </div>
+  <div class="p-2 flex-fill">
+    <h3>UUID: </h3>
+    <pre><code [highlight]="codeURlUUID | codeFromUrl | async"></code></pre>
+  </div>
+  <div class="p-2 flex-fill">
+    <h3>Email: </h3>
+    <pre><code [highlight]="codeURlEmail | codeFromUrl | async"></code></pre>
+  </div>
+  <div class="p-2 flex-fill">
+    <h3>Password: </h3>
+    <pre><code [highlight]="codeURlPassword | codeFromUrl | async"></code></pre>
+  </div>
+  <div class="p-2 flex-fill">
+    <h3>Address: </h3>
+    <pre><code [highlight]="codeURlAddress | codeFromUrl | async"></code></pre>
   </div>
 </div>

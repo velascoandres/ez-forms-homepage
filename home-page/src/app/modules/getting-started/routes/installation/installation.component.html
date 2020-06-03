@@ -1,14 +1,19 @@
-<div class="container d-flex">
+<div class="container d-flex flex-column">
   <div class="p-2 flex-fill">
     <app-title title="Installation"></app-title>
   </div>
-  <div class="p-2">
+  <div class="p-2 flex-fill">
     <p>
       <strong> ez-form</strong>  is a component that allows create reactive forms for angular 2+.
-      This library makes use of angular material, bocd otstrap and PrimeNG libraries and components
+      This library makes use of angular material, <strong>bootstrap</strong> and <strong>PrimeNG</strong> libraries and components.
     </p>
   </div>
   <div class="p-2 flex-fill">
+    <h3>Install: </h3>
     <pre><code [highlight]="condeInstall"></code></pre>
+  </div>
+  <div class="p-2 flex-fill">
+    <h3>Add to the module: </h3>
+    <pre><code [highlight]="codeURl | codeFromUrl | async"></code></pre>
   </div>
 </div>

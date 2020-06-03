@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { getHighlightLanguages } from 'src/app/constants/languajes';
+import { HighlightPlusModule } from 'ngx-highlightjs/plus';
 
 
 @NgModule({
@@ -9,6 +10,7 @@ import { getHighlightLanguages } from 'src/app/constants/languajes';
   imports: [
     CommonModule,
     HighlightModule,
+    HighlightPlusModule,
   ],
   providers: [
     {
@@ -20,6 +22,7 @@ import { getHighlightLanguages } from 'src/app/constants/languajes';
   ],
   exports: [
     HighlightModule,
+    HighlightPlusModule,
   ]
 })
 export class SharedModule { }

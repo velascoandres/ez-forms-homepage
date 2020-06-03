@@ -10,6 +10,7 @@ import { CheckboxComponent } from './routes/checkbox/checkbox.component';
 import { FileComponent } from './routes/file/file.component';
 import { RadioButtonComponent } from './routes/radio-button/radio-button.component';
 import { TitleModule } from 'src/app/components/title/title.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { TitleModule } from 'src/app/components/title/title.module';
     CommonModule,
     FormControlsRoutingModule,
     TitleModule,
+    SharedModule,
   ]
 })
 export class FormControlsModule { }

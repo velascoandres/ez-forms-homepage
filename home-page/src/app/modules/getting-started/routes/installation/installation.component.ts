@@ -8,7 +8,10 @@ import { INSTALL_PACKAGE } from '../../constants/code-snippets';
 })
 export class InstallationComponent implements OnInit {
   condeInstall = INSTALL_PACKAGE;
-  constructor() { }
+  codeURl = location.origin + '/assets/codes/install/add-modules.ts';
+  constructor() {
+    console.log(this.codeURl);
+   }
 
   ngOnInit(): void {
   }

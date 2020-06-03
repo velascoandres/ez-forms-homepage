@@ -1,10 +1,6 @@
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
+  imports:  [
     EzFormModule,
   ],
-  providers: [],
 })
 export class Class { }
