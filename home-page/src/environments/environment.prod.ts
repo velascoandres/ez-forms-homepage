@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  uri: location.origin + '/ez-forms-homepage/#'
+  uri: location.origin + '/ez-forms-homepage'
 };
