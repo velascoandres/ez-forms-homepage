@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-text',
@@ -7,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TextComponent implements OnInit {
 
-  codeURlEmail = location.origin + '/assets/codes/forms/email.txt';
-  codeURlUUID = location.origin + '/assets/codes/forms/uuid.txt';
-  codeURlAddress = location.origin + '/assets/codes/forms/textarea.txt';
-  codeURlPassword = location.origin + '/assets/codes/forms/password.txt';
+  codeURlEmail = environment.uri + '/assets/codes/forms/email.txt';
+  codeURlUUID = environment.uri + '/assets/codes/forms/uuid.txt';
+  codeURlAddress = environment.uri + '/assets/codes/forms/textarea.txt';
+  codeURlPassword = environment.uri + '/assets/codes/forms/password.txt';
 
   constructor() { }
 

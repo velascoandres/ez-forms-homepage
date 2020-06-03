@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { INSTALL_PACKAGE } from '../../constants/code-snippets';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-installation',
@@ -8,10 +9,10 @@ import { INSTALL_PACKAGE } from '../../constants/code-snippets';
 })
 export class InstallationComponent implements OnInit {
   condeInstall = INSTALL_PACKAGE;
-  codeURl = location.origin + '/assets/codes/install/add-modules.ts';
+  codeURl = environment.uri + '/assets/codes/install/add-modules.ts';
   constructor() {
     console.log(this.codeURl);
-   }
+  }
 
   ngOnInit(): void {
   }
