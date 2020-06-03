@@ -39,6 +39,6 @@ import { HasChildrenPipe } from './pipes/has-children.pipe';
     MatTooltipModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

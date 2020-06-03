@@ -2,6 +2,7 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap-grid.min.css';
 @import '../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import '../node_modules/animate.css/animate.min.css';
+@import '~highlight.js/styles/github.css';
 
 
 .mat-toolbar.mat-warn  {

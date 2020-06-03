@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { INSTALL_PACKAGE } from '../../constants/code-snippets';
 
 @Component({
   selector: 'app-installation',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./installation.component.css']
 })
 export class InstallationComponent implements OnInit {
-
+  condeInstall = INSTALL_PACKAGE;
   constructor() { }
 
   ngOnInit(): void {
