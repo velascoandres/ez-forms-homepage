@@ -1,0 +1,17 @@
+emailField: InputTextFieldInterface = {
+    controlName: 'email',
+    validators: [
+      Validators.required,
+      Validators.email
+    ],
+    placeholder: 'Enter an email',
+    type: {
+      typeName: 'input-text',
+      maxLength: 30,
+    },
+    errorMessages: {
+      required: 'The email is mandatory',
+      email: 'You must enter a valid email',
+    },
+    hint: 'Enter a valid email'
+  };
