@@ -12,8 +12,10 @@ export class TextComponent implements OnInit {
   codeURlUUID = environment.uri + '/assets/codes/forms/uuid.txt';
   codeURlAddress = environment.uri + '/assets/codes/forms/textarea.txt';
   codeURlPassword = environment.uri + '/assets/codes/forms/password.txt';
-  pathComponentTs = '';
-  pathComponentHtml = '';
+  // tslint:disable-next-line: max-line-length
+  pathComponentTs = 'https://raw.githubusercontent.com/velascoandres/ez-forms-homepage/master/home-page/src/app/modules/form-controls/components/text-form/text-form.component.ts';
+  // tslint:disable-next-line: max-line-length
+  pathComponentHtml = 'https://raw.githubusercontent.com/velascoandres/ez-forms-homepage/master/home-page/src/app/modules/form-controls/components/text-form/text-form.component.html';
 
   constructor() { }
 
