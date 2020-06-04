@@ -4,20 +4,105 @@
   </div>
   <div class="p-2 flex-fill">
     <p>
-      To make use of text entries in the form, the field must first be defined through an object of type <strong>InputTextFieldInterface</strong>.
+      To make use of text entries in the form, the field must first be defined through an object of type
+      <strong>InputTextFieldInterface</strong>.
     </p>
   </div>
+
+  <div class="p-2">
+    <h3 class="subtitulo">InputTextFieldInterface</h3>
+    <p>The <strong>InputTextFieldInterface</strong> extends of <strong>PrincipalFormFieldInterface</strong></p>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>controlName</td>
+          <td>Field name</td>
+        </tr>
+        <tr>
+          <td>label</td>
+          <td>Label for input</td>
+        </tr>
+        <tr>
+          <td>placeholder</td>
+          <td>Short hint that descripbes the expected value of an input field</td>
+        </tr>
+        <tr>
+          <td>type</td>
+          <td>
+            Object of <strong>InputTextTypeInterface</strong>:
+          </td>
+        </tr>
+        <tr>
+          <td>validators</td>
+          <td>Array of angular validators or <strong>EzForms custom validators</strong>.</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+  </div>
   <div class="p-2 flex-fill">
-    <h3>Examples: </h3>
-      <p>
-        So we need a form with the following fields:
-      </p>
-      <ul>
-        <li>UUID</li>
-        <li>Email</li>
-        <li>Password</li>
-        <li>Address</li>
-      </ul>
+    <h3 class="subtitulo">InputTextTypeInterface</h3>
+    <p>The <strong>InputTextTypeInterface</strong> extends of <strong>PrincipalTypeInterface</strong>.</p>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ul class="list-group">
+        </ul>
+        <tr>
+          <td>typeName</td>
+          <td>Type name could be "input-text" for simple input of "textArea" for textarea</td>
+        </tr>
+        <tr>
+          <td>maxLength</td>
+          <td>the input value max length </td>
+        </tr>
+        <tr>
+          <td>minLenght</td>
+          <td>the input value min length </td>
+        </tr>
+        <tr>
+          <td>class</td>
+          <td>
+            Is used to hide the characters entered. The only value for this property is "password".
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="p-2 flex-fill">
+    <h3 class="subtitulo">Example: </h3>
+    <p>
+      Lest create a form with the following fields:
+    </p>
+    <ul>
+      <li>UUID</li>
+      <li>Email</li>
+      <li>Password</li>
+      <li>Address</li>
+    </ul>
+  </div>
+  <div class="p-2 flex-fill">
+    <h3>Results:</h3>
+    <div class="container-form">
+      <app-text-form></app-text-form>
+    </div>
+  </div>
+  <!-- <div class="p-2 flex-fill">
+    <h3 class="titulo subtitulo">Implementation</h3>
+    <p>Define the form controls: </p>
   </div>
   <div class="p-2 flex-fill">
     <h3>UUID: </h3>
@@ -34,5 +119,15 @@
   <div class="p-2 flex-fill">
     <h3>Address: </h3>
     <pre><code [highlight]="codeURlAddress | codeFromUrl | async"></code></pre>
+  </div> -->
+  <div class="p-2">
+    <mat-tab-group>
+      <mat-tab label="text-form.component.ts">
+        <pre><code [highlight]="pathComponentTs | codeFromUrl | async"></code></pre>
+      </mat-tab>
+      <mat-tab label="text-form.component.html">
+        <pre><code [highlight]="pathComponentHtml | codeFromUrl | async"></code></pre>
+      </mat-tab>
+    </mat-tab-group>
   </div>
 </div>

@@ -10,6 +10,9 @@ export class TitleComponent implements OnInit {
   @Input()
   title = '';
 
+  @Input()
+  subtitle = false;
+
   constructor() { }
 
   ngOnInit(): void {

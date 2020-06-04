@@ -17,6 +17,7 @@ import { MenuItemComponent } from './components/menu-item/menu-item.component';
 import { ListItemComponent } from './components/list-item/list-item.component';
 // Pipes
 import { HasChildrenPipe } from './pipes/has-children.pipe';
+import { SubtitleComponent } from './components/subtitle/subtitle.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { HasChildrenPipe } from './pipes/has-children.pipe';
     MenuItemComponent,
     ListItemComponent,
     HasChildrenPipe,
+    SubtitleComponent,
   ],
   imports: [
     BrowserModule,

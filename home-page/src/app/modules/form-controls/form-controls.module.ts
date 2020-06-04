@@ -11,6 +11,7 @@ import { FileComponent } from './routes/file/file.component';
 import { RadioButtonComponent } from './routes/radio-button/radio-button.component';
 import { TitleModule } from 'src/app/components/title/title.module';
 import { SharedModule } from '../shared/shared.module';
+import { TextFormComponent } from './components/text-form/text-form.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { SharedModule } from '../shared/shared.module';
     CheckboxComponent,
     FileComponent,
     RadioButtonComponent,
+    TextFormComponent,
   ],
   imports: [
     CommonModule,

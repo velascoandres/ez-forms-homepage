@@ -1,5 +1,8 @@
-<div class="titulo">
-  <div class="triangle">
+<div  [ngClass]="{'titulo': !subtitle}" >
+  <div  [ngClass]="{'triangle': !subtitle }">
   </div>
-  <h2>{{title}}</h2>
+  <h2 *ngIf="!subtitle">{{title}}</h2>
+  <h3 *ngIf="subtitle">
+      <span class="subtitulo">{{title}}</span>
+  </h3>
 </div>

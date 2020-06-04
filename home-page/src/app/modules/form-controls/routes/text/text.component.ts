@@ -12,6 +12,8 @@ export class TextComponent implements OnInit {
   codeURlUUID = environment.uri + '/assets/codes/forms/uuid.txt';
   codeURlAddress = environment.uri + '/assets/codes/forms/textarea.txt';
   codeURlPassword = environment.uri + '/assets/codes/forms/password.txt';
+  pathComponentTs = '';
+  pathComponentHtml = '';
 
   constructor() { }
 
