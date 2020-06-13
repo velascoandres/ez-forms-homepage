@@ -7,6 +7,11 @@ import { FORMS_CONTROLS_LAZY_ROUTES } from './modules/form-controls/constants/la
 const routes: Routes = [
   ...GETTING_STARTED_LAZY_ROUTES,
   ...FORMS_CONTROLS_LAZY_ROUTES,
+  {
+    path: '',
+    redirectTo: 'getting-started',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({

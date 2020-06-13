@@ -99,7 +99,7 @@ strong{
 }
 
 
-code{
+.standard-code > pre > code{
   height: 20rem;
   overflow-y: auto;
   margin-bottom: 1rem;
