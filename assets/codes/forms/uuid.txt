@@ -1,0 +1,7 @@
+     uuidField: InputTextFieldInterface = {
+       controlName: 'uuid',
+       type: {
+         typeName: 'input-text'
+       },
+       disabled: true,
+     };

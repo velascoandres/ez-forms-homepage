@@ -1,0 +1,12 @@
+  addressField: TextAreaFieldInterface = {
+    controlName: 'address',
+    label: 'Address',
+    placeholder: 'Enter a complete address',
+    type: {
+      typeName: 'textArea',
+      maxLength: 20,
+    },
+    validators: [
+      Validators.required,
+    ],
+  }
