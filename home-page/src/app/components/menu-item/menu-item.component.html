@@ -5,7 +5,7 @@
       <div [ngClass]="{'selected': selected, 'triangle': menuItem | hasChildren, 'item-dot': !(menuItem | hasChildren) }">
       </div>
       <div class="menu-sub-item">
-        {{menuItem.title}}
+        <span class="item-menu">{{menuItem.title}}</span>
       </div>
     </div>
     <div class="content animate__animated" *ngIf="(menuItem | hasChildren)"

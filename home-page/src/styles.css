@@ -3,6 +3,7 @@
 @import '../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import '../node_modules/animate.css/animate.min.css';
 @import '~highlight.js/styles/github.css';
+@import '../node_modules/angular2-toaster/toaster';
 
 
 .mat-toolbar.mat-warn  {
@@ -42,12 +43,16 @@ h3{
   font-size: 1.5rem !important;
 }
 
-.subtitulo{
-  border-bottom: 0.2rem solid  black;
+p, h2, h3, h4, td, tr, li, .item-menu{
+  color: white !important;
 }
 
-.titulo{
-  border-bottom: 0.2rem solid red;
+p{
+  font-size: 1rem;
+}
+
+body{
+  background-color: #263238;
 }
 
 
@@ -71,4 +76,31 @@ h3{
   top: 1rem;
   position: relative;
   height: 1rem;
+}
+
+code{
+  border-radius: 5px;
+}
+
+.subtitulo{
+  border-bottom: solid #b71c1c;
+}
+
+strong{
+  color: #ffb300;
+}
+
+.mat-hint, .ng-star-inserted{
+  color: white;
+}
+
+.alert-warning{
+  background-color: black;
+}
+
+
+code{
+  height: 20rem;
+  overflow-y: auto;
+  margin-bottom: 1rem;
 }

@@ -94,40 +94,25 @@
       <li>Address</li>
     </ul>
   </div>
-  <div class="p-2 flex-fill">
-    <h3>Results:</h3>
-    <div class="container-form">
-      <app-text-form></app-text-form>
-    </div>
-  </div>
-  <!-- <div class="p-2 flex-fill">
-    <h3 class="titulo subtitulo">Implementation</h3>
-    <p>Define the form controls: </p>
-  </div>
-  <div class="p-2 flex-fill">
-    <h3>UUID: </h3>
-    <pre><code [highlight]="codeURlUUID | codeFromUrl | async"></code></pre>
-  </div>
-  <div class="p-2 flex-fill">
-    <h3>Email: </h3>
-    <pre><code [highlight]="codeURlEmail | codeFromUrl | async"></code></pre>
-  </div>
-  <div class="p-2 flex-fill">
-    <h3>Password: </h3>
-    <pre><code [highlight]="codeURlPassword | codeFromUrl | async"></code></pre>
-  </div>
-  <div class="p-2 flex-fill">
-    <h3>Address: </h3>
-    <pre><code [highlight]="codeURlAddress | codeFromUrl | async"></code></pre>
-  </div> -->
+
   <div class="p-2">
     <mat-tab-group>
       <mat-tab label="text-form.component.ts">
-        <pre><code [highlight]="pathComponentTs | codeFromUrl | async"></code></pre>
+        <div class="standard-code">
+          <pre><code [highlight]="pathComponentTs | codeFromUrl | async"></code></pre>
+        </div>
       </mat-tab>
       <mat-tab label="text-form.component.html">
-        <pre><code [highlight]="pathComponentHtml | codeFromUrl | async"></code></pre>
+        <div class="standard-code">
+          <pre><code [highlight]="pathComponentHtml | codeFromUrl | async"></code></pre>
+        </div>
       </mat-tab>
     </mat-tab-group>
+  </div>
+  <div class="p-2 flex-fill">
+    <h3>Results:</h3>
+    <div class="container-form contenedor">
+      <app-text-form></app-text-form>
+    </div>
   </div>
 </div>
